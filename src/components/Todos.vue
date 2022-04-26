@@ -8,8 +8,9 @@
 
 <script>
 import { mapGetters } from 'vuex';
+
 export default {
-  computed: { ...mapGetters(['allTodos']) },
+  computed: mapGetters('todos', { allTodos: 'allTodos' }),
 };
 </script>
 
