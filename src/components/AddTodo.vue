@@ -12,7 +12,7 @@
       </div>
       <div class="add">
           <form @submit="onSubmit">
-              <input type="text" v-model="title" placeholder="Add Todo...."/>
+              <input type="text" v-model="title" id="addTodo" placeholder="Add Todo...."/>
               <input type="submit" value="Submit" />
           </form>
       </div>
@@ -32,6 +32,7 @@ export default {
         onSubmit(e){
             e.preventDefault();
             this.addTodo(this.title);
+            e.target.reset();            
         }
     }
 }
